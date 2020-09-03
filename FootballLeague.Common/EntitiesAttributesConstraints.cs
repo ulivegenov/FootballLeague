@@ -7,6 +7,6 @@
         public const int NameMaxLength = 50;
 
         //Game
-        public const int TeamGoalsMinLength = 0;
+        public const int TeamGoalsMinValue = 0;
     }
 }

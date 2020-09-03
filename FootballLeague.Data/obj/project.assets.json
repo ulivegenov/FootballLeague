@@ -1496,9 +1496,23 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "FootballLeague.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/FootballLeague.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FootballLeague.Common.dll": {}
+        }
+      },
       "FootballLeague.Data.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FootballLeague.Common": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/FootballLeague.Data.Models.dll": {}
         },
@@ -5667,6 +5681,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "FootballLeague.Common/1.0.0": {
+      "type": "project",
+      "path": "../FootballLeague.Common/FootballLeague.Common.csproj",
+      "msbuildProject": "../FootballLeague.Common/FootballLeague.Common.csproj"
     },
     "FootballLeague.Data.Models/1.0.0": {
       "type": "project",

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Sb/4kvvRzGMLqHAdMoP8u/lwDgJRCkPI7BIL6HkUfxoaVwxJdDb8ZatPHgU3oMgG38DKkWPaW5VVb7qQOMs4jw==",
+  "dgSpecHash": "5gatdNjLv2BHezyofevUS26wIFNe4xnwjq08sEFYftTG8Bl4buPJ9W6IzVpkVKf/a0GXIs1VbXLUXpJLfstgRg==",
   "success": true,
   "projectFilePath": "E:\\MyProjects\\FootballLeague\\FootballLeague.Data.Models\\FootballLeague.Data.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
