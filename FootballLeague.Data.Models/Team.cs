@@ -1,5 +1,6 @@
 ﻿namespace FootballLeague.Data.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using FootballLeague.Common;
@@ -19,5 +20,9 @@
         public int GoalsFor { get; set; }
 
         public int GoalsAgainst { get; set; }
+
+        public virtual ICollection<Game> HomeGames { get; set; }
+
+        public virtual ICollection<Game> AwayGames { get; set; }
     }
 }

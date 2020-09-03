@@ -3,3 +3,10 @@ E:\MyProjects\FootballLeague\FootballLeague.Data.Models\bin\Debug\netstandard2.0
 E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.csprojAssemblyReference.cache
 E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.AssemblyInfoInputs.cache
 E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.AssemblyInfo.cs
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\bin\Debug\netstandard2.0\FootballLeague.Data.Models.pdb
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\bin\Debug\netstandard2.0\FootballLeague.Common.dll
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\bin\Debug\netstandard2.0\FootballLeague.Common.pdb
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.csproj.CoreCompileInputs.cache
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.csproj.CopyComplete
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.dll
+E:\MyProjects\FootballLeague\FootballLeague.Data.Models\obj\Debug\netstandard2.0\FootballLeague.Data.Models.pdb
