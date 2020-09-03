@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZId35oA+Z6N7TkXu1IPqHS7W9i5q6lqnBlJyugnhlg1XCF0XyyrFvxULWJFOfNAhSxfmR1wl6LKq3mdjkGWfeA==",
+  "success": true,
+  "projectFilePath": "E:\\MyProjects\\FootballLeague\\FootballLeague.Common\\FootballLeague.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
