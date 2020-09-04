@@ -5,10 +5,8 @@
 
     using FootballLeague.Common;
 
-    public class Team
+    public class Team : BaseDeletableEntity<int>
     {
-        public int Id { get; set; }
-
         [Required]
         [MaxLength(EntitiesAttributesConstraints.NameMaxLength)]
         public string Name { get; set; }

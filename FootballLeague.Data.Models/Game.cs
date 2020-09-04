@@ -6,10 +6,8 @@
     using FootballLeague.Common;
     using FootballLeague.Data.Models.Enums.Team;
 
-    public class Game
+    public class Game : BaseDeletableEntity<int>
     {
-        public int Id { get; set; }
-
         [Range(EntitiesAttributesConstraints.TeamGoalsMinValue, int.MaxValue)]
         public int HomeTeamGoals { get; set; }
 

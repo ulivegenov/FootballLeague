@@ -10,6 +10,10 @@
     <Compile Remove="Migrations\20200903193246_InitialMigration.Designer.cs" />
     <Compile Remove="Migrations\20200903193726_InitialMigration.cs" />
     <Compile Remove="Migrations\20200903193726_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200904073733_AddIsDeletedPropertyAndTimeInfoProperies.cs" />
+    <Compile Remove="Migrations\20200904073733_AddIsDeletedPropertyAndTimeInfoProperies.Designer.cs" />
+    <Compile Remove="Migrations\20200904074009_AddIsDeletedPropertyAndTimeInfoProperies.cs" />
+    <Compile Remove="Migrations\20200904074009_AddIsDeletedPropertyAndTimeInfoProperies.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
