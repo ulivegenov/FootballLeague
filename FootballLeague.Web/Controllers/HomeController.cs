@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using FootballLeague.Web.ViewModels.Errors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using FootballLeague.Web.Models;
 
 namespace FootballLeague.Web.Controllers
 {

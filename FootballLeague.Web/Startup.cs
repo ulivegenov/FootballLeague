@@ -1,13 +1,15 @@
 namespace FootballLeague.Web
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
+    using System.Reflection;
     using FootballLeague.Data;
+    using FootballLeague.Data.Models;
+    using FootballLeague.Data.Repositories;
+    using FootballLeague.Services.Data;
+    using FootballLeague.Services.Mapping;
+    using FootballLeague.Services.Models.Teams;
+    using FootballLeague.Web.ViewModels.Teams;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.HttpsPolicy;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -27,12 +29,25 @@ namespace FootballLeague.Web
         {
             services.AddDbContext<FootballLeagueDbContext>(
                 options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllersWithViews();
+
+            // Data repositories
+            services.AddScoped(typeof(BaseEntityRepository<Team, int>), typeof(TeamsRepository));
+            services.AddScoped(typeof(BaseEntityRepository<Game, int>), typeof(GamesRepository));
+
+            // Application services
+            services.AddTransient<BaseService<Game, int>, GamesService>();
+            services.AddTransient<BaseService<Team, int>, TeamsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AutoMapperConfig.RegisterMappings(
+                typeof(TeamWebInputModel).GetTypeInfo().Assembly,
+                typeof(TeamServiceInputModel).GetTypeInfo().Assembly);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

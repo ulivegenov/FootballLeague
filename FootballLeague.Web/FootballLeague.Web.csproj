@@ -14,6 +14,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FootballLeague.Data\FootballLeague.Data.csproj" />
+    <ProjectReference Include="..\FootballLeague.Services.Data\FootballLeague.Services.Data.csproj" />
+    <ProjectReference Include="..\FootballLeague.Services.Models\FootballLeague.Services.Models.csproj" />
+    <ProjectReference Include="..\FootballLeague.Web.ViewModels\FootballLeague.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Games\" />
   </ItemGroup>
 
 </Project>

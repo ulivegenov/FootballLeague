@@ -46,6 +46,7 @@
             => await this.footballLeagueDbContext.Games
                                                  .Where(e => e.Id.Equals(entityId))
                                                  .FirstOrDefaultAsync();
+
         protected override async Task<Game> GetEntityFromDbAsync(Game game)
             => await this.footballLeagueDbContext.Games
                                                  .Where(e => e.Id.Equals(game.Id))
@@ -59,6 +60,19 @@
             dbEntity.HomeTeamId = entity.HomeTeamId;
             dbEntity.HomeTeamGoals = entity.HomeTeamGoals;
             dbEntity.IsDeleted = entity.IsDeleted;
+            dbEntity.Status = entity.Status;
+            dbEntity.CreatedOn = entity.CreatedOn;
+            dbEntity.DeletedOn = entity.DeletedOn;
+        }
+
+        protected override void MarkEntityAsDeleted(Game dbEntity, Game entity)
+        {
+            dbEntity.Id = entity.Id;
+            dbEntity.AwayTeamId = entity.AwayTeamId;
+            dbEntity.AwayTeamGoals = entity.AwayTeamGoals;
+            dbEntity.HomeTeamId = entity.HomeTeamId;
+            dbEntity.HomeTeamGoals = entity.HomeTeamGoals;
+            dbEntity.IsDeleted = !entity.IsDeleted;
             dbEntity.Status = entity.Status;
             dbEntity.CreatedOn = entity.CreatedOn;
             dbEntity.DeletedOn = entity.DeletedOn;

@@ -1,8 +1,3 @@
-E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.AssemblyInfoInputs.cache
-E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.AssemblyInfo.cs
-E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csprojAssemblyReference.cache
-E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csproj.CopyComplete
-E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csproj.CoreCompileInputs.cache
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\appsettings.json
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\FootballLeague.Data.deps.json
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\FootballLeague.Data.runtimeconfig.json
@@ -13,6 +8,11 @@ E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\Footbal
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\FootballLeague.Data.Models.dll
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\FootballLeague.Data.Models.pdb
 E:\MyProjects\FootballLeague\FootballLeague.Data\bin\Debug\netcoreapp3.1\FootballLeague.Common.pdb
+E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csprojAssemblyReference.cache
+E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.AssemblyInfoInputs.cache
+E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.AssemblyInfo.cs
+E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csproj.CoreCompileInputs.cache
+E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.csproj.CopyComplete
 E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.dll
 E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.pdb
 E:\MyProjects\FootballLeague\FootballLeague.Data\obj\Debug\netcoreapp3.1\FootballLeague.Data.genruntimeconfig.cache

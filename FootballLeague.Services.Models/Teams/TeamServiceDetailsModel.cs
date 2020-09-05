@@ -8,7 +8,7 @@
     using FootballLeague.Services.Mapping;
     using FootballLeague.Services.Models.Contracts;
 
-    public class TeamsServiceDetailsModel : IServiceDetailsModel<int>, IMapFrom<Team>, IMapTo<Team>
+    public class TeamServiceDetailsModel : IServiceDetailsModel<int>, IMapFrom<Team>, IMapTo<Team>
     {
         public int Id { get; set; }
 

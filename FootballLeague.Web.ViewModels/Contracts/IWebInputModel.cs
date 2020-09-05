@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using FootballLeague.Services.Mapping;
 namespace FootballLeague.Web.ViewModels.Contracts
 {
-    interface IWebInputModel
+    public interface IWebInputModel
     {
     }
 }

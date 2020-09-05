@@ -7,7 +7,7 @@
 
     using FootballLeague.Common;
     using FootballLeague.Data.Models;
-    using FootballLeague.Data.Repositories.Contracts;
+    using FootballLeague.Data.Repositories;
     using FootballLeague.Services.Data.Contracts;
     using FootballLeague.Services.Mapping;
     using FootballLeague.Services.Models.Contracts;
@@ -17,9 +17,9 @@
     public class BaseService<TEntity, TKey> : IBaseService<TKey>
         where TEntity : BaseDeletableEntity<TKey>
     {
-        private readonly IBaseEntityRepository<TEntity, TKey> baseEntityRepository;
+        private readonly BaseEntityRepository<TEntity, TKey> baseEntityRepository;
 
-        public BaseService(IBaseEntityRepository<TEntity, TKey> baseEntityRepository)
+        public BaseService(BaseEntityRepository<TEntity, TKey> baseEntityRepository)
         {
             this.baseEntityRepository = baseEntityRepository;
         }

@@ -1,0 +1,25 @@
+﻿@model FootballLeague.Web.ViewModels.Teams.TeamWebDetailsModel
+
+@{
+    this.ViewData["Title"] = "Team Details";
+}
+
+<h3 class="text-center">TEAM DETAILS</h3>
+
+<div class="row">
+    <div class="text-center" style="margin:auto">
+        <hr />
+        <table class="table-hover table-striped" width="100%" border="1" cellspacing="2" cellpadding="4">
+            <partial name="TableHeadPartial" />
+            <tbody>
+                <partial name="TeamPartial" />
+            </tbody>
+        </table>
+        <hr />
+        <div class="form-group text-center">
+            <a class="btn btn-primary" asp-controller="Teams" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            <a class="btn btn-secondary" asp-controller="Teams" asp-action="All">Go Back</a>
+            <a class="btn btn-danger" asp-controller="Teams" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+        </div>
+    </div>
+</div>

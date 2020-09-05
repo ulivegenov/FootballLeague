@@ -67,6 +67,20 @@
             this.CopyElementsFromSourceCollectionToTarget(entity.AwayGames, dbEntity.AwayGames);
         }
 
+        protected override void MarkEntityAsDeleted(Team dbEntity, Team entity)
+        {
+            dbEntity.Id = entity.Id;
+            dbEntity.Name = entity.Name;
+            dbEntity.Points = entity.Points;
+            dbEntity.CreatedOn = dbEntity.CreatedOn;
+            dbEntity.DeletedOn = entity.DeletedOn;
+            dbEntity.GoalsAgainst = entity.GoalsAgainst;
+            dbEntity.GoalsFor = entity.GoalsFor;
+            dbEntity.IsDeleted = !entity.IsDeleted;
+            this.CopyElementsFromSourceCollectionToTarget(entity.HomeGames, dbEntity.HomeGames);
+            this.CopyElementsFromSourceCollectionToTarget(entity.AwayGames, dbEntity.AwayGames);
+        }
+
         private void CopyElementsFromSourceCollectionToTarget(ICollection<Game> source, ICollection<Game> target)
         {
             foreach (var item in source)

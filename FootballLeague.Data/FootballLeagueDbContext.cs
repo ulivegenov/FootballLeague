@@ -16,6 +16,8 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Game>()
                         .HasOne(g => g.HomeTeam)
                         .WithMany(ht => ht.HomeGames)

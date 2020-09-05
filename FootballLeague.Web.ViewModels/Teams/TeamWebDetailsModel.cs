@@ -9,7 +9,7 @@
     using FootballLeague.Services.Models.Teams;
     using FootballLeague.Web.ViewModels.Contracts;
 
-    public class TeamWebDetailsModel : IWebDetailsModel<int>, IMapFrom<TeamsServiceDetailsModel>, IMapTo<TeamsServiceDetailsModel>
+    public class TeamWebDetailsModel : IWebDetailsModel<int>, IMapFrom<TeamServiceDetailsModel>, IMapTo<TeamServiceDetailsModel>
     {
         public int Id { get; set; }
 

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Team view";
+    var i = 1;
+}
+
+<tr>
+    <th class="align-middle" scope="row">@(i++)</th>
+    <td class="align-middle">@Model.Name</td>
+    <td class="align-middle">@(Model.HomeGames.Count + Model.AwayGames.Count)</td>
+    <td class="align-middle">@Model.GoalsFor</td>
+    <td class="align-middle">@Model.GoalsAgainst</td>
+    <td class="align-middle">@(Model.GoalsFor - Model.GoalsAgainst)</td>
+    <td class="align-middle">@Model.Points</td>
+</tr>

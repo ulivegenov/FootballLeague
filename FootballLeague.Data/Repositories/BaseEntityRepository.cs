@@ -24,7 +24,7 @@
 
             if (result != null)
             {
-                this.MapModelToDbEntity(result, entity);
+                this.MarkEntityAsDeleted(result, entity);
 
                 await this.footballLeagueDbContext.SaveChangesAsync();
 
@@ -65,5 +65,7 @@
         protected abstract Task<TEntity> GetEntityFromDbAsync(TKey entityId);
 
         protected abstract void MapModelToDbEntity(TEntity dbEntity, TEntity entity);
+
+        protected abstract void MarkEntityAsDeleted(TEntity dbEntity, TEntity entity);
     }
 }
