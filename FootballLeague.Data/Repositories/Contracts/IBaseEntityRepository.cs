@@ -14,7 +14,7 @@
 
         Task<TEntity> UpdateAsync(TEntity entity);
 
-        TEntity DeleteAsync(TEntity entity);
+        Task<TEntity> DeleteAsync(TEntity entity);
 
         Task<TEntity> HardDelete(int entityId);
     }
