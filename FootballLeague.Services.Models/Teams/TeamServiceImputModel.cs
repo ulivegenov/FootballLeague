@@ -1,11 +1,11 @@
-﻿namespace FootballLeague.Data.Models
+﻿namespace FootballLeague.Services.Models.Teams
 {
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using FootballLeague.Common;
+    using FootballLeague.Services.Models.Contracts;
 
-    public class Team : BaseDeletableEntity<int>
+    public class TeamServiceImputModel : IServiceInputModel
     {
         [Required]
         [MaxLength(EntitiesAttributesConstraints.NameMaxLength)]
@@ -16,9 +16,5 @@
         public int GoalsFor { get; set; }
 
         public int GoalsAgainst { get; set; }
-
-        public virtual ICollection<Game> HomeGames { get; set; } = new List<Game>();
-
-        public virtual ICollection<Game> AwayGames { get; set; } = new List<Game>();
     }
 }

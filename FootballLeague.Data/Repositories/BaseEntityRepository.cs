@@ -1,11 +1,12 @@
 ﻿namespace FootballLeague.Data.Repositories
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using FootballLeague.Data.Repositories.Contracts;
 
-    public abstract class BaseEntityRepository<TEntity> : IBaseEntityRepository<TEntity>
+    public abstract class BaseEntityRepository<TEntity, TKey> : IBaseEntityRepository<TEntity, TKey>
         where TEntity : class
     {
         private readonly FootballLeagueDbContext footballLeagueDbContext;
@@ -33,12 +34,15 @@
             return null;
         }
 
-        public abstract Task<IEnumerable<TEntity>> GetAllAsync();
+        public abstract IQueryable<TEntity> GetAll();
 
-        public async Task<TEntity> GetByIdAsync(int entityId)
+        public async Task<TEntity> GetByIdAsync(TKey entityId)
             => await this.GetEntityFromDbAsync(entityId);
 
-        public abstract Task<TEntity> HardDelete(int entityId);
+        public abstract Task<TEntity> HardDelete(TKey entityId);
+
+        public Task<int> SaveChangesAsync() 
+            => this.footballLeagueDbContext.SaveChangesAsync();
 
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
@@ -58,7 +62,7 @@
 
         protected abstract Task<TEntity> GetEntityFromDbAsync(TEntity entity);
 
-        protected abstract Task<TEntity> GetEntityFromDbAsync(int entityId);
+        protected abstract Task<TEntity> GetEntityFromDbAsync(TKey entityId);
 
         protected abstract void MapModelToDbEntity(TEntity dbEntity, TEntity entity);
     }

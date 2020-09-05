@@ -14,6 +14,8 @@
     <Compile Remove="Migrations\20200904073733_AddIsDeletedPropertyAndTimeInfoProperies.Designer.cs" />
     <Compile Remove="Migrations\20200904074009_AddIsDeletedPropertyAndTimeInfoProperies.cs" />
     <Compile Remove="Migrations\20200904074009_AddIsDeletedPropertyAndTimeInfoProperies.Designer.cs" />
+    <Compile Remove="Migrations\20200905141316_MakeGameForeignKeysRequiredRemoveTeamGamesPalyed.cs" />
+    <Compile Remove="Migrations\20200905141316_MakeGameForeignKeysRequiredRemoveTeamGamesPalyed.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,13 +1,12 @@
 ﻿namespace FootballLeague.Data.Repositories
 {
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
     using FootballLeague.Data.Models;
     using Microsoft.EntityFrameworkCore;
 
-    public class GamesRepository : BaseEntityRepository<Game>
+    public class GamesRepository : BaseEntityRepository<Game, int>
     {
         private readonly FootballLeagueDbContext footballLeagueDbContext;
 
@@ -24,10 +23,9 @@
             return result.Entity;
         }
 
-        public override async Task<IEnumerable<Game>> GetAllAsync()
-            => await this.footballLeagueDbContext.Games
-                                                 .Where(e => !e.IsDeleted)
-                                                 .ToListAsync();
+        public override IQueryable<Game> GetAll()
+            => this.footballLeagueDbContext.Games
+                                           .Where(e => !e.IsDeleted);
 
         public override async Task<Game> HardDelete(int entityId)
         {

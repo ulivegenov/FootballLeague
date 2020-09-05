@@ -1,14 +1,15 @@
 ﻿namespace FootballLeague.Data.Repositories.Contracts
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
-    public interface IBaseEntityRepository<TEntity>
+    public interface IBaseEntityRepository<TEntity, TKey>
         where TEntity : class
     {
-        Task<IEnumerable<TEntity>> GetAllAsync();
+        IQueryable<TEntity> GetAll();
 
-        Task<TEntity> GetByIdAsync(int entityId);
+        Task<TEntity> GetByIdAsync(TKey entityId);
 
         Task<TEntity> AddAsync(TEntity entity);
 
@@ -16,6 +17,8 @@
 
         Task<TEntity> DeleteAsync(TEntity entity);
 
-        Task<TEntity> HardDelete(int entityId);
+        Task<TEntity> HardDelete(TKey entityId);
+
+        Task<int> SaveChangesAsync();
     }
 }

@@ -7,7 +7,7 @@
     using FootballLeague.Data.Models;
     using Microsoft.EntityFrameworkCore;
 
-    public class TeamsRepository : BaseEntityRepository<Team>
+    public class TeamsRepository : BaseEntityRepository<Team, int>
     {
         private readonly FootballLeagueDbContext footballLeagueDbContext;
 
@@ -24,10 +24,9 @@
             return result.Entity;
         }
 
-        public override async Task<IEnumerable<Team>> GetAllAsync()
-            => await this.footballLeagueDbContext.Teams
-                                                 .Where(e => !e.IsDeleted)
-                                                 .ToListAsync();
+        public override IQueryable<Team> GetAll()
+            => this.footballLeagueDbContext.Teams
+                                           .Where(e => !e.IsDeleted);
 
         public override async Task<Team> HardDelete(int entityId)
         {
@@ -61,7 +60,6 @@
             dbEntity.Points = entity.Points;
             dbEntity.CreatedOn = dbEntity.CreatedOn;
             dbEntity.DeletedOn = entity.DeletedOn;
-            dbEntity.GamesPlayed = entity.GamesPlayed;
             dbEntity.GoalsAgainst = entity.GoalsAgainst;
             dbEntity.GoalsFor = entity.GoalsFor;
             dbEntity.IsDeleted = entity.IsDeleted;

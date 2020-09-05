@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\FootballLeague.Data.Models\FootballLeague.Data.Models.csproj" />
+    <ProjectReference Include="..\FootballLeague.Data\FootballLeague.Data.csproj" />
+    <ProjectReference Include="..\FootballLeague.Services.Mapping\FootballLeague.Services.Mapping.csproj" />
+    <ProjectReference Include="..\FootballLeague.Services.Models\FootballLeague.Services.Models.csproj" />
+  </ItemGroup>
+
+</Project>
