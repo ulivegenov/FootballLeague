@@ -1,4 +1,4 @@
-﻿namespace FootballLeague.Services.Models.Games
+﻿namespace FootballLeague.Web.ViewModels.Games
 {
     using System.ComponentModel.DataAnnotations;
 
@@ -6,12 +6,12 @@
     using FootballLeague.Data.Models;
     using FootballLeague.Data.Models.Enums.Team;
     using FootballLeague.Services.Mapping;
-    using FootballLeague.Services.Models.Contracts;
+    using FootballLeague.Services.Models.Games;
+    using FootballLeague.Web.ViewModels.Contracts;
 
-    public class GameServiceDetailsModel : IServiceDetailsModel<int>, IMapFrom<Game>, IMapTo<Game>
+    public class GameWebDetailsModel : IWebDetailsModel<int>, IMapFrom<GameServiceDetailsModel>, IMapTo<GameServiceDetailsModel>
     {
         public int Id { get; set; }
-
         public bool IsDeleted { get; set; }
 
         [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]

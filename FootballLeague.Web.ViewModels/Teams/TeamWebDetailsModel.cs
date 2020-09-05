@@ -1,4 +1,4 @@
-﻿namespace FootballLeague.Services.Models.Teams
+﻿namespace FootballLeague.Web.ViewModels.Teams
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -6,9 +6,10 @@
     using FootballLeague.Common;
     using FootballLeague.Data.Models;
     using FootballLeague.Services.Mapping;
-    using FootballLeague.Services.Models.Contracts;
+    using FootballLeague.Services.Models.Teams;
+    using FootballLeague.Web.ViewModels.Contracts;
 
-    public class TeamsServiceDetailsModel : IServiceDetailsModel<int>, IMapFrom<Team>, IMapTo<Team>
+    public class TeamWebDetailsModel : IWebDetailsModel<int>, IMapFrom<TeamsServiceDetailsModel>, IMapTo<TeamsServiceDetailsModel>
     {
         public int Id { get; set; }
 

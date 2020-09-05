@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballLeague.Services.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballLeague.Services.Models", "FootballLeague.Services.Models\FootballLeague.Services.Models.csproj", "{842D49EF-2813-4419-ABA9-FFD158C72CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballLeague.Web.ViewModels", "FootballLeague.Web.ViewModels\FootballLeague.Web.ViewModels.csproj", "{0F60B442-0065-4E8B-82BB-E3F85D52CB22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{842D49EF-2813-4419-ABA9-FFD158C72CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{842D49EF-2813-4419-ABA9-FFD158C72CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{842D49EF-2813-4419-ABA9-FFD158C72CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F60B442-0065-4E8B-82BB-E3F85D52CB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F60B442-0065-4E8B-82BB-E3F85D52CB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F60B442-0065-4E8B-82BB-E3F85D52CB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F60B442-0065-4E8B-82BB-E3F85D52CB22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
