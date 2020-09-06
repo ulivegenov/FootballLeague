@@ -1,0 +1,42 @@
+﻿@model FootballLeague.Web.ViewModels.Games.GameWebDetailsModel
+
+@{
+    this.ViewData["Title"] = "Game Details";
+}
+
+<h3 class="text-center">GAME DETAILS</h3>
+
+<div class="row">
+    <div class="text-center" style="margin:auto">
+        <hr />
+        <table class="table-hover table-striped" width="100%" border="1" cellspacing="2" cellpadding="4">
+            <thead class="table-head-fixed tab">
+                <tr>
+                    <th scope="col">
+                        <a type="button" class="btn btn-primary py-1 px-1" asp-controller="Games" asp-action="Create">
+                            + New Game
+                        </a>
+                    </th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Home Team</th>
+                    <th scope="col">Away Team</th>
+                    <th scope="col">Result</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="align-middle" scope="row">1</th>
+                    <td class="align-middle">@Model.CreatedOn.ToString("dd-MM-yyyy")</td>
+                    <td class="align-middle">@Model.HomeTeam.Name</td>
+                    <td class="align-middle">@Model.AwayTeam.Name</td>
+                    <td class="align-middle">@Model.HomeTeamGoals - @Model.AwayTeamGoals</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr /> 
+    </div>
+</div>
+<div class="form-group text-center">
+    @*<a class="btn btn-primary" asp-controller="Games" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>*@
+    <a class="btn btn-secondary" asp-controller="Games" asp-action="All">Go Back</a>
+    <a class="btn btn-danger" asp-controller="Games" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+</div>

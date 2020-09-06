@@ -1,10 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Team view";
-    var i = 1;
 }
 
 <tr>
-    <th class="align-middle" scope="row">@(i++)</th>
+    <th class="align-middle" scope="row">1</th>
     <td class="align-middle">@Model.Name</td>
     <td class="align-middle">@(Model.HomeGames.Count + Model.AwayGames.Count)</td>
     <td class="align-middle">@Model.GoalsFor</td>

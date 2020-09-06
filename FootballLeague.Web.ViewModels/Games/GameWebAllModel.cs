@@ -4,7 +4,7 @@
 
     using FootballLeague.Web.ViewModels.Contracts;
 
-    public class GamesWebAllModel : IWebAllModel<int>
+    public class GameWebAllModel : IWebAllModel<int>
     {
         public ICollection<IWebDetailsModel<int>> Entities { get; set; } = new List<IWebDetailsModel<int>>();
     }

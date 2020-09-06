@@ -1,5 +1,6 @@
 ﻿namespace FootballLeague.Web.ViewModels.Games
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     using FootballLeague.Common;
@@ -12,6 +13,9 @@
     public class GameWebDetailsModel : IWebDetailsModel<int>, IMapFrom<GameServiceDetailsModel>, IMapTo<GameServiceDetailsModel>
     {
         public int Id { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
         public bool IsDeleted { get; set; }
 
         [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]

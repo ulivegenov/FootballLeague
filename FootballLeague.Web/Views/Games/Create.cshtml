@@ -1,0 +1,49 @@
+﻿@model FootballLeague.Web.ViewModels.Games.GameWebInputModel
+@{
+    ViewData["Title"] = "Game Create Page";
+    var teams = Model.Teams.Select(t => new SelectListItem(t.Name, t.Id.ToString()));
+}
+
+<div class="row">
+    <div style="margin:auto">
+        <section>
+            <form id="account" enctype="multipart/form-data" method="post">
+                <h4 class="text-center">Add new Game</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label asp-for="HomeTeamId"></label>
+                        <select class="form-control" asp-for="HomeTeamId" asp-items="@teams">
+                            <option value="">Select Team</option>
+                        </select>
+                        <span asp-validation-for="HomeTeamId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="HomeTeamGoals"></label>
+                        <input asp-for="HomeTeamGoals" class="form-control" />
+                        <span asp-validation-for="HomeTeamGoals" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label asp-for="AwayTeamId"></label>
+                        <select class="form-control" asp-for="AwayTeamId" asp-items="@teams">
+                            <option value="">Select Team</option>
+                        </select>
+                        <span asp-validation-for="AwayTeamId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="AwayTeamGoals"></label>
+                        <input asp-for="AwayTeamGoals" class="form-control" />
+                        <span asp-validation-for="AwayTeamGoals" class="text-danger"></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Add Result</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

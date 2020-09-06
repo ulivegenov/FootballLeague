@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Game table body view";
+}
+
+@for (int i = 0; i < Model.Entities.Count; i++)
+{
+<tr onclick="location.href = '@Url.Action("Details", new { id = Model.Entities[i].Id })'">
+    <th class="align-middle" scope="row">@(i + 1)</th>
+    <td class="align-middle">@Model.Entities[i].CreatedOn.ToString("dd-MM-yyyy")</td>
+    <td class="align-middle">@Model.Entities[i].HomeTeam.Name</td>
+    <td class="align-middle">@Model.Entities[i].AwayTeam.Name</td>
+    <td class="align-middle">@Model.Entities[i].HomeTeamGoals - @Model.Entities[i].AwayTeamGoals</td>
+</tr>
+}

@@ -24,7 +24,7 @@
             this.baseEntityRepository = baseEntityRepository;
         }
 
-        public async Task<int> CreateAsync(IServiceInputModel servicesInputViewModel)
+        public virtual async Task<int> CreateAsync(IServiceInputModel servicesInputViewModel)
         {
             var entity = servicesInputViewModel.To<TEntity>();
 
@@ -34,7 +34,7 @@
             return result;
         }
 
-        public async Task<int> DeleteByIdAsync(TKey id)
+        public virtual async Task<int> DeleteByIdAsync(TKey id)
         {
             var entity = await this.baseEntityRepository.GetByIdAsync(id);
 
@@ -59,7 +59,16 @@
             return result;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync<T>()
+        public virtual async Task<IEnumerable<IServiceDetailsModel<TKey>>> GetAllAsync()
+        {
+            var entities = await this.baseEntityRepository.GetAll()
+                                                          .To<IServiceDetailsModel<TKey>>()
+                                                          .ToListAsync();
+
+            return entities;
+        }
+
+        public virtual async Task<IEnumerable<T>> GetAllAsync<T>()
         {
             var entities = await this.baseEntityRepository.GetAll()
                                                           .To<T>()
@@ -68,7 +77,7 @@
             return entities;
         }
 
-        public async Task<T> GetByIdAsync<T>(TKey id)
+        public virtual async Task<T> GetByIdAsync<T>(TKey id)
         {
             var entity = await this.baseEntityRepository.GetAll()
                                                         .Where(e => id.Equals(e.Id))

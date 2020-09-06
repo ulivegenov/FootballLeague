@@ -1,5 +1,6 @@
 ﻿namespace FootballLeague.Services.Models.Games
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     using FootballLeague.Common;
@@ -11,6 +12,8 @@
     public class GameServiceDetailsModel : IServiceDetailsModel<int>, IMapFrom<Game>, IMapTo<Game>
     {
         public int Id { get; set; }
+
+        public DateTime CreatedOn { get; set; }
 
         public bool IsDeleted { get; set; }
 

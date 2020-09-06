@@ -5,6 +5,7 @@ namespace FootballLeague.Web
     using FootballLeague.Data.Models;
     using FootballLeague.Data.Repositories;
     using FootballLeague.Services.Data;
+    using FootballLeague.Services.Data.Contracts;
     using FootballLeague.Services.Mapping;
     using FootballLeague.Services.Models.Teams;
     using FootballLeague.Web.ViewModels.Teams;
@@ -39,6 +40,7 @@ namespace FootballLeague.Web
             // Application services
             services.AddTransient<BaseService<Game, int>, GamesService>();
             services.AddTransient<BaseService<Team, int>, TeamsService>();
+            services.AddTransient<ITeamsService, TeamsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

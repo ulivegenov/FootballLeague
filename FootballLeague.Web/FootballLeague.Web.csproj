@@ -19,8 +19,4 @@
     <ProjectReference Include="..\FootballLeague.Web.ViewModels\FootballLeague.Web.ViewModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Games\" />
-  </ItemGroup>
-
 </Project>

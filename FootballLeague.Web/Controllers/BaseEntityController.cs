@@ -27,13 +27,13 @@
             this.entityService = entityService;
         }
 
-        public IActionResult Create()
+        public virtual async Task<IActionResult> Create()
         {
             return this.View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TEntityWebInputModel entityWebInputModel)
+        public virtual async Task<IActionResult> Create(TEntityWebInputModel entityWebInputModel)
         {
             if (!this.ModelState.IsValid)
             {
@@ -44,7 +44,7 @@
 
             await this.entityService.CreateAsync(entityServiceModel);
 
-            return this.Redirect("/Teams/All");
+            return this.Redirect($"/{typeof(TEntity).Name}s/All");
         }
 
         public async Task<IActionResult> All(TEntityWebAllModel viewModel)
@@ -52,7 +52,7 @@
             var entities = await this.entityService
                                      .GetAllAsync<TEntityServiceDetailsModel>();
 
-            this.AddProductsToViewModel(viewModel, entities);
+            this.AddEntitiesToViewModel(viewModel, entities);
 
             return this.View(viewModel);
         }
@@ -74,7 +74,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(TEntityWebDetailsModel entityEditModel)
+        public virtual async Task<IActionResult> Edit(TEntityWebDetailsModel entityEditModel)
         {
             if (!this.ModelState.IsValid)
             {
@@ -115,7 +115,7 @@
             return this.Redirect($"/{typeof(TEntity).Name}s/All");
         }
 
-        protected void AddProductsToViewModel(TEntityWebAllModel viewModel, IEnumerable<TEntityServiceDetailsModel> entities)
+        protected void AddEntitiesToViewModel(TEntityWebAllModel viewModel, IEnumerable<TEntityServiceDetailsModel> entities)
         {
             foreach (var entity in entities)
             {

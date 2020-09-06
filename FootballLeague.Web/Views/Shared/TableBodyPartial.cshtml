@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Table body view";
+}
+
+<tbody>
+    @for (int i = 0; i < Model.Entities.Count; i++)
+    {
+        <tr>
+            <th class="align-middle" scope="row">@(i + 1)</th>
+            <td class="align-middle">@Model.Entities[i].Name</td>
+            <td class="align-middle">@(Model.Entities[i].HomeGames.Count + Model.Entities[i].AwayGames.Count)</td>
+            <td class="align-middle">@Model.Entities[i].GoalsFor</td>
+            <td class="align-middle">@Model.Entities[i].GoalsAgainst</td>
+            <td class="align-middle">@(Model.Entities[i].GoalsFor - Model.Entities[i].GoalsAgainst)</td>
+            <td class="align-middle">@Model.Entities[i].Points</td>
+        </tr>
+    }
+</tbody>
