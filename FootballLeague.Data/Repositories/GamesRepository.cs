@@ -60,7 +60,6 @@
             dbEntity.HomeTeamId = entity.HomeTeamId;
             dbEntity.HomeTeamGoals = entity.HomeTeamGoals;
             dbEntity.IsDeleted = entity.IsDeleted;
-            dbEntity.Status = entity.Status;
             dbEntity.CreatedOn = entity.CreatedOn;
             dbEntity.DeletedOn = entity.DeletedOn;
         }
@@ -73,7 +72,6 @@
             dbEntity.HomeTeamId = entity.HomeTeamId;
             dbEntity.HomeTeamGoals = entity.HomeTeamGoals;
             dbEntity.IsDeleted = !entity.IsDeleted;
-            dbEntity.Status = entity.Status;
             dbEntity.CreatedOn = entity.CreatedOn;
             dbEntity.DeletedOn = entity.DeletedOn;
         }

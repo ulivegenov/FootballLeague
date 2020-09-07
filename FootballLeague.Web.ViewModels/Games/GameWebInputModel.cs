@@ -4,7 +4,6 @@
     using System.ComponentModel.DataAnnotations;
 
     using FootballLeague.Common;
-    using FootballLeague.Data.Models.Enums.Team;
     using FootballLeague.Services.Mapping;
     using FootballLeague.Services.Models.Games;
     using FootballLeague.Web.ViewModels.Contracts;
@@ -21,9 +20,6 @@
         [Range(EntitiesAttributesConstraints.TeamGoalsMinValue, int.MaxValue)]
         [Display(Name = "Away Team Goals")]
         public int AwayTeamGoals { get; set; }
-
-        [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]
-        public GameStatus Status { get; set; }
 
         [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]
         [Display(Name = "Home Team")]

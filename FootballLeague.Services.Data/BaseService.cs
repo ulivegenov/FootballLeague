@@ -49,7 +49,7 @@
             return result;
         }
 
-        public async Task<int> EditAsync(IServiceDetailsModel<TKey> serviceDetailsModel)
+        public virtual async Task<int> EditAsync(IServiceDetailsModel<TKey> serviceDetailsModel)
         {
             var entity = serviceDetailsModel.To<TEntity>();
 

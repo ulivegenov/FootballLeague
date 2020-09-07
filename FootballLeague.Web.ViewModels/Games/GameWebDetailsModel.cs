@@ -5,7 +5,6 @@
 
     using FootballLeague.Common;
     using FootballLeague.Data.Models;
-    using FootballLeague.Data.Models.Enums.Team;
     using FootballLeague.Services.Mapping;
     using FootballLeague.Services.Models.Games;
     using FootballLeague.Web.ViewModels.Contracts;
@@ -25,8 +24,6 @@
         [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]
         [Range(EntitiesAttributesConstraints.TeamGoalsMinValue, int.MaxValue)]
         public int AwayTeamGoals { get; set; }
-
-        public GameStatus Status { get; set; }
 
         [Required(ErrorMessage = GlobalConstants.RequiredFieldMessage)]
         public int HomeTeamId { get; set; }
